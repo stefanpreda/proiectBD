@@ -11,5 +11,7 @@
         <property name="hibernate.connection.password">airbnb</property>
         <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/airbnb</property>
         <property name="show_sql">true</property>
+        
+        <mapping class = "proiectBD.data2db.AirbnbTableEntry"></mapping>
     </session-factory>
 </hibernate-configuration>
