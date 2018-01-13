@@ -13,3 +13,10 @@ TO DISPLAY TABLES USE:
 
 TO VIEW TABLE STRUCTURE:
 \d+ airbnb_data
+
+
+# DATA2DB
+
+BUILD: mvn clean verify
+
+RUN: cd target; java -jar data2db-0.0.1-SNAPSHOT-jar-with-dependencies.jar ../input/tomslee_airbnb_amsterdam_0443_2016-05-31.csv

@@ -13,6 +13,7 @@ import javax.persistence.Table;
 @Table(name = "airbnb_data")
 public class AirbnbTableEntry {
 
+	/*Use wrapper classes because values can be null*/
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
@@ -34,28 +35,28 @@ public class AirbnbTableEntry {
 	private String neighborhood;
 	
 	@Column(name = "reviews")
-	private int reviews;
+	private Integer reviews;
 	
 	@Column(name = "overall_satisfaction")
-	private float overall_satisfaction;
+	private Float overall_satisfaction;
 	
 	@Column(name = "accommodates")
-	private int accommodates;
+	private Integer accommodates;
 	
 	@Column(name = "bedrooms")
-	private int bedrooms;
+	private Integer bedrooms;
 	
 	@Column(name = "price")
-	private float price;
+	private Float price;
 	
 	@Column(name = "minstay")
-	private int minstay;
+	private Integer minstay;
 	
 	@Column(name = "longitude")
-	private float longitude;
+	private Float longitude;
 	
 	@Column(name = "latitude")
-	private float latitude;
+	private Float latitude;
 	
 	@Column(name = "last_modified")
 	private Date last_modified;
@@ -108,67 +109,67 @@ public class AirbnbTableEntry {
 		this.neighborhood = neighborhood;
 	}
 
-	public int getReviews() {
+	public Integer getReviews() {
 		return reviews;
 	}
 
-	public void setReviews(int reviews) {
+	public void setReviews(Integer reviews) {
 		this.reviews = reviews;
 	}
 
-	public float getOverall_satisfaction() {
+	public Float getOverall_satisfaction() {
 		return overall_satisfaction;
 	}
 
-	public void setOverall_satisfaction(float overall_satisfaction) {
+	public void setOverall_satisfaction(Float overall_satisfaction) {
 		this.overall_satisfaction = overall_satisfaction;
 	}
 
-	public int getAccommodates() {
+	public Integer getAccommodates() {
 		return accommodates;
 	}
 
-	public void setAccommodates(int accommodates) {
+	public void setAccommodates(Integer accommodates) {
 		this.accommodates = accommodates;
 	}
 
-	public int getBedrooms() {
+	public Integer getBedrooms() {
 		return bedrooms;
 	}
 
-	public void setBedrooms(int bedrooms) {
+	public void setBedrooms(Integer bedrooms) {
 		this.bedrooms = bedrooms;
 	}
 
-	public float getPrice() {
+	public Float getPrice() {
 		return price;
 	}
 
-	public void setPrice(float price) {
+	public void setPrice(Float price) {
 		this.price = price;
 	}
 
-	public int getMinstay() {
+	public Integer getMinstay() {
 		return minstay;
 	}
 
-	public void setMinstay(int minstay) {
+	public void setMinstay(Integer minstay) {
 		this.minstay = minstay;
 	}
 
-	public float getLongitude() {
+	public Float getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(float longitude) {
+	public void setLongitude(Float longitude) {
 		this.longitude = longitude;
 	}
 
-	public float getLatitude() {
+	public Float getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(float latitude) {
+	public void setLatitude(Float latitude) {
 		this.latitude = latitude;
 	}
 
@@ -179,5 +180,6 @@ public class AirbnbTableEntry {
 	public void setLast_modified(Date last_modified) {
 		this.last_modified = last_modified;
 	}
+	
 	
 }
