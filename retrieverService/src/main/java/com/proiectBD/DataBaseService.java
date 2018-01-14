@@ -54,7 +54,7 @@ public class DataBaseService {
                         JsonObject returned = new JsonObject();
                         System.out.println("returned from db " + rows);
                         for (JsonArray row : rows) {
-                           returned.put(row.getString(0), row.getInteger(1).toString());
+                           returned.put(row.getString(0), row.getInteger(1));
                         }
                         handler.handle(Future.succeededFuture(returned));
                     }
@@ -90,10 +90,10 @@ public class DataBaseService {
                         for (JsonArray row : rows ) {
                             Float percentage = (float)row.getInteger(1) / total * 100L;
                             if (row.getString(0) != null) {
-                                returned.put(row.getString(0), percentage.toString());
+                                returned.put(row.getString(0), percentage);
                             }
                             else {
-                                returned.put("undefined", percentage.toString());
+                                returned.put("undefined", percentage);
                             }
                         }
                         handler.handle(Future.succeededFuture(returned));
@@ -122,9 +122,9 @@ public class DataBaseService {
                         System.out.println("returned from db " + rows);
                         for (JsonArray row : rows) {
                             if (row.getInteger(0) != null)
-                                returned.put(row.getInteger(0).toString(), row.getInteger(1).toString());
+                                returned.put(row.getInteger(0).toString(), row.getInteger(1));
                             else
-                                returned.put("undefined", row.getInteger(1).toString());
+                                returned.put("undefined", row.getInteger(1));
                         }
                         handler.handle(Future.succeededFuture(returned));
                     }

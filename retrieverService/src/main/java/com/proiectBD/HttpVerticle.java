@@ -54,7 +54,7 @@ public class HttpVerticle extends AbstractVerticle {
             if (result.succeeded()) {
                 JsonObject json = result.result();
                 System.out.println("got response from db " + json);
-                rc.response().setStatusCode(200).end(json.encodePrettily());
+                rc.response().setStatusCode(200).putHeader("Access-Control-Allow-Origin", "*").end(json.encodePrettily());
             }
             else {
                 rc.response().setStatusCode(500).end();
@@ -68,7 +68,7 @@ public class HttpVerticle extends AbstractVerticle {
             if (result.succeeded()) {
                 JsonObject json = result.result();
                 System.out.println("got response from db " + json);
-                rc.response().setStatusCode(200).end(json.encodePrettily());
+                rc.response().setStatusCode(200).putHeader("Access-Control-Allow-Origin", "*").end(json.encodePrettily());
             }
             else {
                 rc.response().setStatusCode(500).end();
@@ -83,7 +83,7 @@ public class HttpVerticle extends AbstractVerticle {
             if (result.succeeded()) {
                 JsonObject json = result.result();
                 System.out.println("got response from db " + json);
-                rc.response().setStatusCode(200).end(json.encodePrettily());
+                rc.response().setStatusCode(200).putHeader("Access-Control-Allow-Origin", "*").end(json.encode());
             }
             else {
                 rc.response().setStatusCode(500).end();
