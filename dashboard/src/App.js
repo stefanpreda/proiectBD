@@ -80,7 +80,7 @@ class App extends Component {
                   </ResponsiveContainer>
                   </Col>
                   <Col lg={6}>
-                    <h2>Stats Bedrooms</h2>
+                    <h2>Stats Rooms</h2>
                     <ResponsiveContainer width='100%' aspect={6.0/4.0}>
                       <Doughnut data={this.state.graph2} />
                     </ResponsiveContainer>
@@ -89,7 +89,7 @@ class App extends Component {
                   <Row>
                     <Col lg={12}>
                     <h2>Stats Neighbourhood</h2>
-                    <ResponsiveContainer width='100%' aspect={6.0/4.0}>
+                    <ResponsiveContainer width='100%' aspect={4.0/0.8}>
 						        <BarChart data={this.state.graph3} margin={{top: 50, right: 30, left: 0, bottom: 0}}>
                       <XAxis dataKey="name"/>
                       <YAxis/>
